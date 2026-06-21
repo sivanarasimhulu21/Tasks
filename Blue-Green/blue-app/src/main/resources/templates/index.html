@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+
+    <header>
+        <div class="logo">DevOps Live Demo</div>
+        <div class="status-badge" th:text="${badge}"></div>
+    </header>
+
+    <main class="hero">
+        <section class="hero-left">
+            <h1 th:text="${title}"></h1>
+            <p th:text="${subtitle}"></p>
+
+            <div class="metrics">
+                <div class="card">
+                    <h2>99.98%</h2>
+                    <span>Availability</span>
+                </div>
+                <div class="card">
+                    <h2>120ms</h2>
+                    <span>Latency</span>
+                </div>
+                <div class="card">
+                    <h2>24/7</h2>
+                    <span>Monitoring</span>
+                </div>
+            </div>
+
+            <button>Deployment Active</button>
+        </section>
+
+        <section class="dashboard">
+            <div class="panel large">
+                <h3>Traffic Routing</h3>
+                <div class="bar">
+                    <div class="fill"></div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h3>Containers</h3>
+                <p>12 Running</p>
+            </div>
+
+            <div class="panel">
+                <h3>Kubernetes</h3>
+                <p>Healthy Cluster</p>
+            </div>
+
+            <div class="panel large">
+                <h3>Blue-Green Strategy</h3>
+                <p>Zero downtime deployment with instant rollback support.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
